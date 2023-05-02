@@ -30,7 +30,6 @@ namespace KasBalance
                 GetUtxosByAddressesRequest = new GetUtxosByAddressesRequestMessage
                 {
                     Addresses = { strAdress } // change this to your address
-                                              //             Addresses = { "kaspa:qq8vljkccder84lnch6je68z426smzs8are6060535e50dmg9dzl6xuznrf53" } // change this to your address
                 }
             };
 
@@ -46,7 +45,7 @@ namespace KasBalance
                 nTotal += ab.UtxoEntry.Amount;
             }
             dBalance = nTotal / 100000000.0;
-            Trace.WriteLine("×ÜÓà¶î£º" + dBalance);
+            Trace.WriteLine("Balance:" + dBalance);
 
             txtBalance.Text = string.Format("{0:F8}", dBalance); //dBalance.ToString();
         }
